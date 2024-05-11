@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Awesome Industries Inc.</h1>
+        <h2>Cute Cupcakes For Best Besties</h2>
+    </header>
+    <section class=" blue container">
+        <h2>
+            OUR SERVICES://
+        </h2>
+        <article class="cards"> 
+        <div class="icons">&#9749;</div>
+        <h3>Tanisha Kushwah</h3>
+        <p>Miss. Web Developer - Creates beautiful websites for businesses in Internet.</p>
+        <button>Contact</button>
+    </article>
+        <article class="card">
+            <div class="icons"> &#9734;</div>
+            <h3>Tanisha Kushwah</h3>
+        <p>Miss. Web Developer - Creates simple, beautiful websites for businesses in Internet.</p>
+        <button>Contact</button>
+        </article>
+        <article></article>
+    </section>
+
+   <section id ="containerh">
+    <table >
+        <tr>
+            <td>Name: </td>
+            <td><input type="text" size="25" name="my-name"></td>
+        </tr>
+
+        <tr>
+            <td>Address: </td>
+            <td><input type="text" size="25" name="my-address"></td>
+        </tr>
+
+        <tr>
+            <td>Favourite drink: </td>
+            <td>
+                <select name="my-drin">
+                    <option> Milk</option>
+                    <option> Coffee</option>
+                    <option> Tea</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Quantity: </td>
+            <td><input type="number" name="my-qty" value="1" min="1" max="5"></td>
+        </tr>
+        <tr>
+            <br>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="Process Order" onclick="placeOrder";>
+                <input class="button" type="reset" value="Clear" onclick="document.getElementById('my-order').style.display = 'none'";>
+           </td>
+        </tr>
+        
+    <form type="number">
+        <h1>GOODFY FORM:</h1>
+        What's the silliest idea you have ever had?
+        
+        <input type="text" size="50">
+        <br><br>
+        <br>
+    <div id="my-order"></div>
+    <button>Submit</button>
+    </form>
+    <br>
+    <br>
+    </table>
+</section>
+<!--     
+    <form type="number">
+        <h1>GOODFY FORM:</h1>
+        What's the silliest idea you have ever had?
+        <br>
+        <input type="text" size="50">
+        <br><br>
+        <button>Submit</button>
+        <br>
+    <div id="my-order"></div>
+    </form> -->
+
+    <script>
+        function placeOrder(){
+            results ="<h3>Success!</h3> Here is your order.";
+            results += "<br>Name: " + orderForm.elements["my-name"].vaiue;
+            results += "<br>Address: " + orderForm.elements["my-address"].vaiue;
+            results += "<br>I Like to order: " + orderForm.elements["my-drink"].vaiue;
+            results += "<br>Quantity: " + orderForm.elements["my-qty"].vaiue;
+            var orderResults = document.getElementById("my-order");
+            orderResults.style.display = "block";
+            orderResults.innerHTML = results;
+        }
+    </script>
+</body>
+</html>
